@@ -6,16 +6,28 @@ export const Form = styled(Unform)`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 576px) {
+    padding: 24px 20px;
+  }
+
   h1 {
     font-weight: 600;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 40px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 24px;
+    }
   }
 
   button {
     margin-top: 48px;
     align-self: flex-end;
+
+    @media (max-width: 576px) {
+      margin-top: 20px;
+    }
   }
 
   button {

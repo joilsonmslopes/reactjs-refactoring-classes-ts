@@ -15,6 +15,7 @@ export const Container = styled.div<ContainerProps>`
     overflow: hidden;
     transition: 0.3s opacity;
     text-align: center;
+    position: relative;
 
     ${props =>
     !props.available &&
@@ -25,6 +26,16 @@ export const Container = styled.div<ContainerProps>`
     img {
       pointer-events: none;
       user-select: none;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 576px) {
+        width: 100%;
+        max-width: 350px;
+      }
     }
   }
 
@@ -62,6 +73,10 @@ export const Container = styled.div<ContainerProps>`
     background: #e4e4eb;
     border-radius: 0px 0px 8px 8px;
 
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+
     div.icon-container {
       display: flex;
 
@@ -86,6 +101,10 @@ export const Container = styled.div<ContainerProps>`
     div.availability-container {
       display: flex;
       align-items: center;
+
+      @media (max-width: 576px) {
+          margin-top: 16px;
+        }
 
       p {
         color: #3d3d4d;

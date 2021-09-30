@@ -5,12 +5,22 @@ export const Container = styled.div`
   padding: 30px 0;
 
   header {
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 0 160px;
+    padding: 0 16px 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
 
     nav {
       div {
@@ -36,7 +46,13 @@ export const Container = styled.div`
             border-radius: 0 8px 8px 0;
             margin: 0 auto;
           }
+
+          @media (max-width: 576px) {
+            margin-top: 32px;
+          }
         }
+
+        
       }
     }
   }

@@ -40,7 +40,8 @@ export const Container = styled.div<ContainerProps>`
     `}
 
   input {
-    flex: 1;
+    width: 100%;
+    height: 24px;
     background: transparent;
     border: 0;
     color: #b7b7cc;
